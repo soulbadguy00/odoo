@@ -456,11 +456,11 @@
                                t-att-data-res-model="'account.move.line'"
                                class="o_account_financial_reports_web_action_monetary_multi"
                                t-att-style="style">
-                                <t t-if="line.debit &gt;= line.credit">
-                                    <t t-att-style="style" t-raw="line.debit - line.credit" /></t>
+                                <t t-if="line.final_balance &gt;= 0">
+                                    <t t-att-style="style" t-raw="line.final_balance" /></t>
 
-                                <t t-if="line.debit &lt; line.credit">
-                                    <t t-att-style="style" t-raw="line.debit * 0" /></t>
+                                <t t-if="line.final_balance &lt; 0">
+                                    <t t-att-style="style" t-raw="line.final_balance * 0" /></t>
                             </a>
                         </span>
                     </t>
@@ -472,11 +472,11 @@
                                t-att-data-res-model="'account.move.line'"
                                class="o_account_financial_reports_web_action_monetary_multi"
                                t-att-style="style">
-                            <t t-if="line.debit &gt;= line.credit">
-                                    <t t-att-style="style" t-raw="line.debit - line.credit" /></t>
+                                <t t-if="line.final_balance &gt;= 0">
+                                    <t t-att-style="style" t-raw="line.final_balance" /></t>
 
-                            <t t-if="line.debit &lt; line.credit">
-                                    <t t-att-style="style" t-raw="line.debit * 0" /></t></a>
+                                <t t-if="line.final_balance &lt; 0">
+                                    <t t-att-style="style" t-raw="line.final_balance * 0" /></t></a>
                         </span>
                     </t>
                 </t>
@@ -489,11 +489,11 @@
                            t-att-data-res-model="'account.move.line'"
                            class="o_account_financial_reports_web_action_monetary_multi"
                            t-att-style="style">
-                        <t t-if="line.debit &gt;= line.credit">
-                                    <t t-att-style="style" t-raw="line.debit - line.credit" /></t>
+                        <t t-if="line.final_balance &gt;= 0">
+                                    <t t-att-style="style" t-raw="line.final_balance" /></t>
 
-                                <t t-if="line.debit &lt; line.credit">
-                                    <t t-att-style="style" t-raw="line.debit * 0" /></t></a>
+                                <t t-if="line.final_balance &lt; 0">
+                                    <t t-att-style="style" t-raw="line.final_balance * 0" /></t></a>
                     </span>
                 </t>
             </div>
@@ -509,11 +509,11 @@
                                t-att-data-res-model="'account.move.line'"
                                class="o_account_financial_reports_web_action_monetary_multi"
                                t-att-style="style">
-                            <t t-if="line.credit &gt;= line.debit">
-                                    <t t-att-style="style" t-raw="line.credit - line.debit" /></t>
+                            <t t-if="line.final_balance &lt; 0">
+                                <t t-att-style="style" t-raw="-1 *line.final_balance" /></t>
 
-                            <t t-if="line.credit &lt; line.debit">
-                                    <t t-att-style="style" t-raw="line.debit * 0" /></t></a>
+                            <t t-if="line.final_balance &gt;= 0">
+                                <t t-att-style="style" t-raw="line.final_balance * 0" /></t></a>
                         </span>
                     </t>
                     <t t-if="line.account_group_id">
@@ -524,11 +524,11 @@
                                t-att-data-res-model="'account.move.line'"
                                class="o_account_financial_reports_web_action_monetary_multi"
                                t-att-style="style">
-                            <t t-if="line.credit &gt;= line.debit">
-                                    <t t-att-style="style" t-raw="line.credit - line.debit" /></t>
+                            <t t-if="line.final_balance &lt; 0">
+                                <t t-att-style="style" t-raw="-1 *line.final_balance" /></t>
 
-                                <t t-if="line.credit &lt; line.debit">
-                                    <t t-att-style="style" t-raw="line.debit * 0"/></t></a>
+                            <t t-if="line.final_balance &gt;= 0">
+                                <t t-att-style="style" t-raw="line.final_balance * 0" /></t></a>
                         </span>
                     </t>
                 </t>
@@ -541,11 +541,11 @@
                            t-att-data-res-model="'account.move.line'"
                            class="o_account_financial_reports_web_action_monetary_multi"
                            t-att-style="style">
-                        <t t-if="line.credit &gt;= line.debit">
-                                    <t t-att-style="style" t-raw="line.credit - line.debit" /></t>
+                        <t t-if="line.final_balance &lt; 0">
+                                <t t-att-style="style" t-raw="-1 *line.final_balance" /></t>
 
-                                <t t-if="line.credit &lt; line.debit">
-                                    <t t-att-style="style" t-raw="line.debit * 0" /></t></a>
+                            <t t-if="line.final_balance &gt;= 0">
+                                <t t-att-style="style" t-raw="line.final_balance * 0" /></t></a>
                     </span>
                 </t>
             </div>
